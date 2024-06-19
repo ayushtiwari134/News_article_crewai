@@ -22,8 +22,8 @@ Ensure you have the following installed on your system:
 1. **Clone the repository**:
 
 ```bash
-git clone https://github.com/yourusername/crewai-gemini-article-generator.git
-cd crewai-gemini-article-generator
+git clone https://github.com/ayushtiwari134/News_article_crewai.git
+cd News_article_crewai
 ```
 
 2. **Install the required dependencies**:
