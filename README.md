@@ -43,7 +43,6 @@ GEMINI_API_KEY=your_gemini_api_key
 
 Use the following command to run the script and generate an article:
 ```bash
-cd crew_news
 python crew.py
 ```
 ### Acknowledgements
