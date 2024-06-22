@@ -1,5 +1,6 @@
 from crewai import Agent
 from tools import tool
+from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 load_dotenv()
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -7,10 +8,16 @@ import os
 
 
 ## call the gemini models
-llm=ChatGoogleGenerativeAI(model="gemini-1.5-flash",
-                           verbose=True,
-                           temperature=0.5,
-                           google_api_key=os.getenv("GOOGLE_API_KEY"))
+# llm=ChatGoogleGenerativeAI(model="gemini-1.5-flash",
+#                            verbose=True,
+#                            temperature=0.5,
+#                            google_api_key=os.getenv("GOOGLE_API_KEY"))
+
+os.environ["OPENAI_API_KEY"] = "NA"
+
+llm = ChatOpenAI(
+    model = "crewai-llama3",
+    base_url = "http://localhost:11434/v1")
 
 # Creating a senior researcher agent with memory and verbose mode
 
